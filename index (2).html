@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTOCIVISMO • Soberania Pessoal ao Serviço do Pacto Comunitário</title>
+<style>
+  :root {
+    --verde-escuro: #1b4332;
+    --verde-medio: #2d6a4f;
+    --verde-claro: #e9f5db;
+    --dourado: #d4a373;
+    --creme: #faf9f5;
+    --texto: #1f2933;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--texto); background-color: var(--creme); line-height: 1.6; }
+  
+  /* Navegação */
+  header { background-color: var(--verde-escuro); color: #fff; padding: 14px 5%; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--dourado); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+  .logo-box { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.25rem; letter-spacing: 1px; }
+  .logo-icon { width: 32px; height: 32px; background: var(--dourado); color: var(--verde-escuro); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 900; }
+  nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  nav a { color: #e9f5db; text-decoration: none; font-size: 0.92rem; font-weight: 600; transition: color 0.2s; }
+  nav a:hover { color: var(--dourado); }
+
+  /* Hero Hook Agressivo */
+  .hero { background: linear-gradient(135deg, #122e22 0%, #1b4332 100%); color: #fff; padding: 70px 6% 60px; text-align: center; border-bottom: 4px solid var(--dourado); }
+  .hero-badge { display: inline-block; background: rgba(212, 163, 115, 0.2); border: 1px solid var(--dourado); color: var(--dourado); padding: 5px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(1.8rem, 4vw, 2.9rem); max-width: 850px; margin: 0 auto 18px; line-height: 1.2; }
+  .hero h1 span { color: var(--dourado); }
+  .hero p { max-width: 720px; margin: 0 auto 30px; font-size: 1.1rem; color: #e9f5db; }
+  .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn { padding: 13px 26px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 1rem; cursor: pointer; border: none; transition: transform 0.15s, opacity 0.2s; }
+  .btn:hover { transform: translateY(-2px); opacity: 0.95; }
+  .btn-gold { background-color: var(--dourado); color: var(--verde-escuro); }
+  .btn-outline { background-color: transparent; border: 2px solid #fff; color: #fff; }
+
+  /* Secções Gerais */
+  section { padding: 55px 6%; max-width: 1180px; margin: 0 auto; }
+  .sec-title { text-align: center; margin-bottom: 36px; }
+  .sec-title h2 { font-size: 1.9rem; color: var(--verde-escuro); text-transform: uppercase; letter-spacing: 0.5px; }
+  .sec-title p { color: #52606d; max-width: 680px; margin: 8px auto 0; }
+
+  /* Grelha da Árvore */
+  .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .card { background: #fff; border: 1px solid #d9e2ec; border-top: 4px solid var(--verde-medio); border-radius: 8px; padding: 22px; box-shadow: 0 3px 10px rgba(0,0,0,0.04); }
+  .card h3 { color: var(--verde-escuro); margin-bottom: 10px; font-size: 1.15rem; }
+  .card ul { padding-left: 18px; font-size: 0.95rem; }
+  .card li { margin-bottom: 6px; }
+
+  /* Banner Regras */
+  .banner-regras { background-color: var(--verde-escuro); color: #fff; padding: 24px; border-radius: 8px; margin: 30px 0; text-align: center; border-left: 6px solid var(--dourado); }
+  .banner-regras strong { color: var(--dourado); }
+
+  /* 7 Pilares */
+  .grid-pilares { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .pilar-card { background: #fff; border: 1px solid #cbd5e1; border-left: 5px solid var(--dourado); padding: 18px; border-radius: 6px; }
+  .pilar-num { font-size: 0.8rem; font-weight: 800; color: var(--verde-medio); text-transform: uppercase; }
+  .pilar-card h4 { font-size: 1.1rem; color: var(--verde-escuro); margin: 3px 0 8px; }
+  .pilar-card p { font-size: 0.93rem; color: #334e68; }
+
+  /* Desafio 12h */
+  .desafio-box { background-color: #fefae0; border: 2px solid var(--dourado); border-radius: 10px; padding: 32px; text-align: center; margin-top: 20px; }
+  .desafio-box h3 { color: var(--verde-escuro); font-size: 1.5rem; margin-bottom: 10px; }
+
+  /* Formulários Lado a Lado */
+  .forms-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; margin-top: 20px; }
+  .form-box { background: #fff; padding: 28px; border-radius: 10px; border: 1px solid #cbd5e1; box-shadow: 0 4px 14px rgba(0,0,0,0.05); }
+  .form-box h3 { color: var(--verde-escuro); margin-bottom: 6px; font-size: 1.35rem; }
+  .form-box p.sub { font-size: 0.9rem; color: #52606d; margin-bottom: 18px; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 5px; color: var(--verde-escuro); }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px 12px; border: 1px solid #bcccdc; border-radius: 6px; font-size: 0.95rem; font-family: inherit; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--verde-medio); }
+  .checkbox-group { display: flex; flex-direction: column; gap: 6px; font-size: 0.9rem; }
+  .checkbox-group label { font-weight: 400; display: flex; align-items: center; gap: 8px; cursor: pointer; }
+  .btn-submit { width: 100%; background-color: var(--verde-escuro); color: #fff; padding: 12px; font-size: 1rem; font-weight: 700; border: none; border-radius: 6px; cursor: pointer; margin-top: 8px; }
+  .btn-submit:hover { background-color: var(--verde-medio); }
+  .status-msg { margin-top: 12px; padding: 10px; border-radius: 6px; font-size: 0.9rem; display: none; }
+  .status-ok { background-color: #e9f5db; color: #1b4332; border: 1px solid #2d6a4f; }
+
+  /* Rodapé */
+  footer { background-color: #122e22; color: #e9f5db; text-align: center; padding: 34px 5%; margin-top: 50px; border-top: 4px solid var(--dourado); font-size: 0.9rem; }
+  footer a { color: var(--dourado); text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-box">
+    <div class="logo-icon">A</div>
+    <span>AUTOCIVISMO</span>
+  </div>
+  <nav>
+    <a href="#arvore">A Árvore</a>
+    <a href="#pilares">7 Pilares</a>
+    <a href="#desafio">#Desafio12h</a>
+    <a href="#voluntarios">Ser Voluntário</a>
+    <a href="#contacto">Contacto Direto</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-badge">Soberania Pessoal • Inclusão • Vizinhança Solidária</div>
+  <h1>Se a luz e a água falharem hoje às 21h00, <span>quem vai salvar a tua casa?</span></h1>
+  <p>Não somos um partido nem uma teoria distante. O <strong>Autocivismo</strong> prepara cada família para ser autónoma nas primeiras 72 horas de crise — e transformar-se num pilar de apoio para os idosos isolados, pessoas com deficiência e vizinhos da aldeia.</p>
+  <div class="hero-btns">
+    <a href="#voluntarios" class="btn btn-gold">Juntar-me como Voluntário</a>
+    <a href="#contacto" class="btn btn-outline">Enviar Mensagem / Sinalizar Apoio</a>
+  </div>
+</div>
+
+<section id="arvore">
+  <div class="sec-title">
+    <h2>A Árvore Completa do Autocivismo</h2>
+    <p>Uma filosofia viva nascida em Portugal que une a preparação doméstica à inclusão humana e ao cuidado pelo território.</p>
+  </div>
+  <div class="grid-4">
+    <div class="card">
+      <h3>1. As Quatro Raízes</h3>
+      <ul>
+        <li><strong>Biológica:</strong> Preservação da vida, água, abrigo, comida e saúde.</li>
+        <li><strong>Ética:</strong> Dignidade humana, inclusão plena e sobriedade sem pânico.</li>
+        <li><strong>Autonomia:</strong> Saber fazer com as próprias mãos e autossuficiência.</li>
+        <li><strong>Comunitária:</strong> Pacto de vizinhança e cuidado ativo pelo território.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>2. O Tronco (Conduta)</h3>
+      <ul>
+        <li><strong>Responsabilidade Radical:</strong> Agir sem esperar passivamente.</li>
+        <li><strong>Reserva e Moderação:</strong> Rotação FIFO sem desperdício.</li>
+        <li><strong>Primazia da Competência:</strong> Saber prático acima da teoria.</li>
+        <li><strong>Vigilância Serena:</strong> Calma e discrição familiar.</li>
+        <li><strong>Dever da Força Útil:</strong> Ajudar quem tem menos autonomia.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>3. Os Ramos (2 Estações)</h3>
+      <ul>
+        <li><strong>Estação da Ordem (Paz):</strong> Prevenção diária, educação em Leitura Fácil, limpeza de terrenos e cultivo.</li>
+        <li><strong>Estação da Tempestade (Crise):</strong> Resposta calma e coordenada em apagões, cheias ou incêndios.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>4. Os Quatro Frutos</h3>
+      <ul>
+        <li>Família protegida e autónoma (72h a 30 dias).</li>
+        <li>Comunidade coesa e inclusiva onde ninguém fica para trás.</li>
+        <li>Território rural limpo e produtivo.</li>
+        <li>Cidadania livre e resiliente.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="pilares" style="padding-top: 10px;">
+  <div class="sec-title">
+    <h2>Os 7 Pilares Técnicos do Autocivismo</h2>
+    <p>Aplicação prática no lar e na comunidade sem paranoia, assente na preparação real.</p>
+  </div>
+
+  <div class="banner-regras">
+    <strong>Regra dos 3:</strong> 3 min sem ar • 3h sem abrigo extremo • 3 dias sem água • 3 semanas sem comida &nbsp;|&nbsp;
+    <strong>Regra da Redundância:</strong> <em>«Dois é um, e um é nenhum.»</em>
+  </div>
+
+  <div class="grid-pilares">
+    <div class="pilar-card">
+      <div class="pilar-num">Pilar 0</div>
+      <h4>Mentalidade e Sobriedade</h4>
+      <p>Controlo do pânico, lucidez sob pressão e ter um plano familiar escrito em papel para não improvisar no escuro.</p>
+    </div>
+    <div class="pilar-card">
+      <div class="pilar-num">Pilar 1</div>
+      <h4>Água e Saneamento</h4>
+      <p>Reserva doméstica mínima de 3 litros/pessoa/dia, filtração, fervura, desinfeção e higiene sem água corrente.</p>
+    </div>
+    <div class="pilar-card">
+      <div class="pilar-num">Pilar 2</div>
+      <h4>Abrigo e Termorregulação</h4>
+      <p>Vestuário por camadas, vedação de correntes de ar no inverno e frescura passiva no verão sem depender só da rede.</p>
+    </div>
+    <div class="pilar-card">
+      <div class="pilar-num">Pilar 3</div>
+      <h4>Fogo e Energia</h4>
+      <p>Lanternas e rádio a dínamo/pilhas, métodos redundantes de ignição e limpeza preventiva de matos antes do verão.</p>
+    </div>
+    <div class="pilar-card">
+      <div class="pilar-num">Pilar 4</div>
+      <h4>Alimentação e Produção</h4>
+      <p>Despensa rotativa (FIFO) com alimentos habituais, conservação tradicional, sementes autóctones e horta local.</p>
+    </div>
+    <div class="pilar-card">
+      <div class="pilar-num">Pilar 5</div>
+      <h4>Saúde e Primeiros Socorros</h4>
+      <p>Estojo de primeiros socorros, higiene rigorosa, fitoterapia autóctone e reserva de 30 dias de medicação contínua.</p>
+    </div>
+    <div class="pilar-card">
+      <div class="pilar-num">Pilar 6</div>
+      <h4>Segurança e Comunicação</h4>
+      <p>Etiquetar cortes de água/gás/luz, mochila de saída rápida (72h), orientação sem GPS e ponto de encontro familiar.</p>
+    </div>
+  </div>
+
+  <div class="desafio-box" id="desafio">
+    <h3>⚡ Aceitas o #DesafioAutocivismo (Apagão de 12 Horas)?</h3>
+    <p style="max-width: 700px; margin: 0 auto 14px;">Desliga o quadro elétrico de casa durante uma noite (das 19h00 às 07h00), prepara o jantar sem eletricidade, mantém a calma em família e descobre o que realmente falta na tua despensa.</p>
+    <a href="#voluntarios" class="btn btn-gold" style="display:inline-block;">Partilhar Resultado & Juntar-me</a>
+  </div>
+</section>
+
+<section id="formularios">
+  <div class="sec-title">
+    <h2>Participa no Movimento</h2>
+    <p>Inscreve-te como voluntário na tua aldeia ou envia uma mensagem direta para a equipa de coordenação (<strong>geral@autocivismo.pt</strong>).</p>
+  </div>
+
+  <div class="forms-wrapper">
+    <!-- Formulário de Voluntários -->
+    <div class="form-box" id="voluntarios">
+      <h3>🤝 Quero Ser Voluntário</h3>
+      <p class="sub">Não precisas de dinheiro nem experiência prévia — basta vontade de ajudar os vizinhos com serenidade.</p>
+      <form id="formVoluntario" onsubmit="enviarFormulario(event, 'voluntario')">
+        <div class="form-group">
+          <label for="vNome">Nome Completo *</label>
+          <input type="text" id="vNome" required placeholder="Ex.: Maria Santos">
+        </div>
+        <div class="form-group">
+          <label for="vTel">Telemóvel / WhatsApp *</label>
+          <input type="tel" id="vTel" required placeholder="Ex.: 910 000 000">
+        </div>
+        <div class="form-group">
+          <label for="vEmail">E-mail</label>
+          <input type="email" id="vEmail" placeholder="Ex.: maria@email.pt">
+        </div>
+        <div class="form-group">
+          <label for="vLocal">Aldeia / Freguesia / Concelho *</label>
+          <input type="text" id="vLocal" required placeholder="Ex.: Rego da Murta, Pussos São Pedro">
+        </div>
+        <div class="form-group">
+          <label>Como gostarias de ajudar?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="vArea" value="Visitas em dupla e etiquetagem de segurança"> Visitas em dupla e etiquetagem de casa segura</label>
+            <label><input type="checkbox" name="vArea" value="Linha de Serenidade (chamadas a idosos)"> Linha de Serenidade (chamadas semanais a idosos)</label>
+            <label><input type="checkbox" name="vArea" value="Leitura Fácil e Inclusão"> Comunicação acessível e Leitura Fácil</label>
+            <label><input type="checkbox" name="vArea" value="Horta, sementes e limpeza de terrenos"> Horta comunitária, sementes e limpeza de matos</label>
+            <label><input type="checkbox" name="vArea" value="Abrir Núcleo Local na minha terra"> Abrir um Núcleo Local na minha freguesia</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="vDisp">Disponibilidade aproximada</label>
+          <select id="vDisp">
+            <option value="2 horas por semana">2 horas por semana</option>
+            <option value="Fins de semana / Pontual">Fins de semana / Ações pontuais</option>
+            <option value="Apoio telefónico à distância">Apoio telefónico à distância</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit">Enviar Inscrição de Voluntário</button>
+        <div id="statusVol" class="status-msg status-ok"></div>
+      </form>
+    </div>
+
+    <!-- Formulário de Contacto / Mensagens -->
+    <div class="form-box" id="contacto">
+      <h3>✉️ Caixa de Mensagens & Contacto</h3>
+      <p class="sub">Tens dúvidas, conheces um idoso isolado que precise de apoio ou queres propor uma parceria? Escreve-nos diretamente.</p>
+      <form id="formContacto" onsubmit="enviarFormulario(event, 'contacto')">
+        <div class="form-group">
+          <label for="cNome">O teu Nome ou Entidade *</label>
+          <input type="text" id="cNome" required placeholder="Ex.: João Silva / Junta de Freguesia">
+        </div>
+        <div class="form-group">
+          <label for="cContacto">Telemóvel ou E-mail de Resposta *</label>
+          <input type="text" id="cContacto" required placeholder="Ex.: 960 000 000 ou joao@email.pt">
+        </div>
+        <div class="form-group">
+          <label for="cAssunto">Assunto *</label>
+          <select id="cAssunto">
+            <option value="Pedido de Informação Geral">Pedido de Informação Geral</option>
+            <option value="Sinalizar Idoso ou Vizinho Isolado">Sinalizar Idoso ou Família para Apoio</option>
+            <option value="Ceder Terreno para Limpeza/Cultivo">Propor Terreno (Programa Terra Limpa)</option>
+            <option value="Parceria Institucional / Autarquia / Empresa">Parceria Institucional, Escola ou Empresa</option>
+            <option value="Imprensa / Comunicação Social">Imprensa / Comunicação Social</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cMensagem">Mensagem *</label>
+          <textarea id="cMensagem" rows="5" required placeholder="Escreve aqui a tua mensagem, localidade e como podemos ajudar..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit" style="background-color: var(--verde-medio);">Enviar Mensagem para geral@autocivismo.pt</button>
+        <div id="statusMsg" class="status-msg status-ok"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>AUTOCIVISMO</strong> • Soberania Pessoal ao Serviço do Pacto Comunitário</p>
+  <p style="margin-top:6px;">Sede de Origem: Rego da Murta, Pussos São Pedro • Alvaiázere, Portugal</p>
+  <p style="margin-top:6px;">Contacto Direto: <a href="mailto:geral@autocivismo.pt">geral@autocivismo.pt</a></p>
+</footer>
+
+<script>
+  const EMAIL_DESTINO = "geral@autocivismo.pt";
+
+  function enviarFormulario(event, tipo) {
+    event.preventDefault();
+    if (tipo === 'voluntario') {
+      const nome = document.getElementById('vNome').value;
+      const tel = document.getElementById('vTel').value;
+      const email = document.getElementById('vEmail').value;
+      const local = document.getElementById('vLocal').value;
+      const disp = document.getElementById('vDisp').value;
+      const areas = Array.from(document.querySelectorAll('input[name="vArea"]:checked')).map(el => el.value).join(', ') || 'Apoio Geral';
+
+      const assunto = encodeURIComponent("[Voluntariado Autocivismo] Nova Inscrição - " + nome);
+      const corpo = encodeURIComponent(
+        "NOVA INSCRIÇÃO DE VOLUNTÁRIO — AUTOCIVISMO
+
+" +
+        "Nome: " + nome + "
+" +
+        "Telemóvel/WhatsApp: " + tel + "
+" +
+        "E-mail: " + email + "
+" +
+        "Localidade: " + local + "
+" +
+        "Disponibilidade: " + disp + "
+" +
+        "Áreas de Interesse: " + areas + "
+"
+      );
+
+      const box = document.getElementById('statusVol');
+      box.style.display = 'block';
+      box.innerHTML = "<strong>Obrigado, " + nome + "!</strong> A abrir a tua aplicação de e-mail para enviar diretamente para <strong>" + EMAIL_DESTINO + "</strong>...";
+      window.location.href = "mailto:" + EMAIL_DESTINO + "?subject=" + assunto + "&body=" + corpo;
+    } else {
+      const nome = document.getElementById('cNome').value;
+      const contacto = document.getElementById('cContacto').value;
+      const assuntoSel = document.getElementById('cAssunto').value;
+      const msg = document.getElementById('cMensagem').value;
+
+      const assunto = encodeURIComponent("[Site Autocivismo] " + assuntoSel + " - " + nome);
+      const corpo = encodeURIComponent(
+        "MENSAGEM RECEBIDA PELO SITE AUTOCIVISMO
+
+" +
+        "Remetente: " + nome + "
+" +
+        "Contacto de Resposta: " + contacto + "
+" +
+        "Assunto: " + assuntoSel + "
+
+" +
+        "Mensagem:
+" + msg + "
+"
+      );
+
+      const box = document.getElementById('statusMsg');
+      box.style.display = 'block';
+      box.innerHTML = "<strong>Mensagem pronta!</strong> A abrir o envio direto para <strong>" + EMAIL_DESTINO + "</strong>...";
+      window.location.href = "mailto:" + EMAIL_DESTINO + "?subject=" + assunto + "&body=" + corpo;
+    }
+  }
+</script>
+
+</body>
+</html>
