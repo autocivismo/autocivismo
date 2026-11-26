@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça o Autocivismo: autonomia, preparação contínua, solidariedade e participação comunitária. Consulte o documento fundacional e participe.">
+  <meta name="theme-color" content="#173f2d">
+  <title>Autocivismo — Autónomo na preparação, civil na conduta</title>
+  <style>
+    :root {
+      --green:#173f2d; --green2:#24583f; --gold:#c5a04b; --cream:#f7f4eb;
+      --ink:#202820; --muted:#667269; --line:#dfe5df; --white:#fff;
+      --shadow:0 12px 34px rgba(22,50,35,.09);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fbfcfa;line-height:1.6}
+    a{color:var(--green2)}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{background:var(--green);color:white;border-bottom:5px solid var(--gold)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;flex-wrap:wrap}
+    .brand{font-weight:850;letter-spacing:.12em;font-size:1.2rem}
+    .brand small{display:block;font-size:.68rem;letter-spacing:.08em;color:#e7d39a;font-weight:600}
+    .navlinks{display:flex;gap:17px;flex-wrap:wrap}
+    .navlinks a{color:white;text-decoration:none;font-size:.92rem}
+    .navlinks a:hover{text-decoration:underline;text-decoration-color:var(--gold)}
+    .hero{padding:72px 0 78px;background:linear-gradient(135deg,#173f2d 0%,#24583f 72%,#1b4934 100%);color:white}
+    .eyebrow{color:#e6cf8e;text-transform:uppercase;letter-spacing:.16em;font-weight:750;font-size:.76rem}
+    h1{font-size:clamp(2.35rem,5vw,4.4rem);line-height:1.08;max-width:850px;margin:14px 0}
+    .hero p{font-size:1.15rem;max-width:720px;color:#edf3ee}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:8px;font-weight:750;text-decoration:none;border:1px solid transparent;cursor:pointer;font:inherit}
+    .btn-gold{background:var(--gold);color:#17291e}
+    .btn-outline{border-color:#d8e4da;color:white;background:transparent}
+    main{padding:42px 0 70px}
+    section{margin:0 0 54px;scroll-margin-top:24px}
+    .section-head{max-width:760px;margin-bottom:22px}
+    h2{font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.2;color:var(--green);margin:0 0 10px}
+    h3{color:var(--green);margin:0 0 8px}
+    .lead{font-size:1.06rem;color:var(--muted);margin:0}
+    .principle{background:var(--cream);border-left:5px solid var(--gold);padding:22px 24px;border-radius:0 12px 12px 0;margin:24px 0;box-shadow:var(--shadow)}
+    .principle blockquote{margin:0;color:var(--green);font-size:clamp(1.2rem,2.5vw,1.65rem);font-weight:800;line-height:1.35}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:white;border:1px solid var(--line);border-radius:13px;padding:20px;box-shadow:var(--shadow)}
+    .number{color:var(--gold);font-weight:850;font-size:.78rem;letter-spacing:.1em}
+    .card p{margin:6px 0 0;color:var(--muted)}
+    .pdfbox{background:white;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+    .pdf-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+    .pdf-actions .btn{background:var(--green);color:white}
+    .pdf-actions .secondary{background:var(--cream);color:var(--green);border-color:var(--line)}
+    .pdf-frame{width:100%;height:760px;border:1px solid var(--line);border-radius:8px;background:#f2f4f1}
+    .notice{background:#edf4ef;border:1px solid #d5e5d9;border-radius:12px;padding:18px 20px;color:#254d36}
+    .notice strong{color:var(--green)}
+    .forms{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    form{display:flex;flex-direction:column;gap:12px}
+    label{font-size:.9rem;font-weight:700;color:#34463a}
+    input,select,textarea{width:100%;padding:11px 12px;border:1px solid #cbd6cd;border-radius:7px;font:inherit;background:white;color:var(--ink)}
+    textarea{min-height:112px;resize:vertical}
+    input:focus,select:focus,textarea:focus{outline:3px solid rgba(197,160,75,.25);border-color:var(--gold)}
+    .field{display:flex;flex-direction:column;gap:5px}
+    .submit{background:var(--green);color:white;border:0;font-weight:750}
+    .small{font-size:.83rem;color:var(--muted)}
+    .volunteer{background:var(--cream);border:1px solid #e8dfc8}
+    .volunteer .submit{background:var(--green2)}
+    footer{background:#122f22;color:#e7eee8;padding:30px 0;border-top:4px solid var(--gold)}
+    footer a{color:#f0d895}
+    .footerrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:800px){.cards{grid-template-columns:1fr 1fr}.forms{grid-template-columns:1fr}.pdf-frame{height:620px}}
+    @media(max-width:560px){.cards{grid-template-columns:1fr}.hero{padding:52px 0}.navlinks{gap:10px}.navlinks a{font-size:.83rem}.pdf-frame{height:500px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav aria-label="Navegação principal">
+      <div class="brand">AUTOCIVISMO<small>Autonomia • Preparação • Cidadania</small></div>
+      <div class="navlinks">
+        <a href="#filosofia">A filosofia</a>
+        <a href="#documento">Documento</a>
+        <a href="#participar">Participar</a>
+        <a href="#voluntariado">Voluntariado</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Uma filosofia prática de vida e cidadania</div>
+    <h1>Autónomo na preparação,<br>civil na conduta.</h1>
+    <p>Cuidar de nós, preparar a família, fortalecer a comunidade e preservar a dignidade humana. O Autocivismo começa nas pequenas decisões de todos os dias.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="#documento">Consultar o documento</a>
+      <a class="btn btn-outline" href="#voluntariado">Quero ser voluntário</a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="filosofia">
+    <div class="section-head">
+      <div class="eyebrow">O que nos orienta</div>
+      <h2>Preparar todos os dias. Ajudar sempre que possível.</h2>
+      <p class="lead">O Autocivismo procura unir a autonomia individual ao respeito pelos outros, à solidariedade e à participação na comunidade.</p>
+    </div>
+    <div class="principle">
+      <blockquote>“A preparação não começa quando chega o problema. Começa com pequenas decisões que tomamos todos os dias.”</blockquote>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="number">01</div><h3>Continuidade Vital</h3><p>Proteger o essencial: água, alimentação, abrigo, higiene e saúde.</p></article>
+      <article class="card"><div class="number">02</div><h3>Auxílio Mútuo</h3><p>Criar confiança, aprender a ajudar e cooperar com a comunidade.</p></article>
+      <article class="card"><div class="number">03</div><h3>Tutela Legítima</h3><p>Prevenir riscos e proteger pessoas e lares, respeitando a lei.</p></article>
+      <article class="card"><div class="number">04</div><h3>Capacidade Generativa</h3><p>Aprender a produzir, reparar, poupar e utilizar recursos com cuidado.</p></article>
+      <article class="card"><div class="number">05</div><h3>Emancipação Consciente</h3><p>Desenvolver autonomia material, financeira e capacidade de pensamento crítico.</p></article>
+      <article class="card"><div class="number">06</div><h3>Firmeza de Espírito</h3><p>Agir com serenidade, adaptar-se e reconstruir depois das dificuldades.</p></article>
+    </div>
+  </section>
+
+  <section id="documento">
+    <div class="section-head">
+      <div class="eyebrow">Documento fundacional</div>
+      <h2>Conheça o Autocivismo</h2>
+      <p class="lead">Consulte o documento completo, conheça os fundamentos, o manifesto, os seis pilares e o roteiro de iniciação de 30 dias.</p>
+    </div>
+    <div class="pdfbox">
+      <div class="pdf-actions">
+        <a class="btn" href="Autocivismo_Documento_Completo_Oficial_REVISTO.pdf" target="_blank" rel="noopener">Abrir PDF numa nova janela</a>
+        <a class="btn secondary" href="Autocivismo_Documento_Completo_Oficial_REVISTO.pdf" download>Guardar PDF</a>
+      </div>
+      <iframe class="pdf-frame" src="Autocivismo_Documento_Completo_Oficial_REVISTO.pdf" title="Documento Completo Oficial do Autocivismo">
+        O seu navegador não consegue apresentar o PDF. Utilize o botão “Abrir PDF numa nova janela”.
+      </iframe>
+    </div>
+  </section>
+
+  <section id="participar">
+    <div class="section-head">
+      <div class="eyebrow">A sua voz é importante</div>
+      <h2>Perguntas, informações e sugestões</h2>
+      <p class="lead">Quer esclarecer uma dúvida, pedir mais informações, sugerir uma iniciativa ou partilhar uma consideração? Entre em contacto connosco.</p>
+    </div>
+    <div class="forms">
+      <article class="card">
+        <h3>Fazer uma pergunta</h3>
+        <p class="small">Para dúvidas sobre a filosofia, os pilares ou o projeto.</p>
+        <form class="email-form" data-subject="Pergunta sobre o Autocivismo">
+          <div class="field"><label for="q-name">Nome (opcional)</label><input id="q-name" name="Nome" autocomplete="name"></div>
+          <div class="field"><label for="q-email">O seu email (opcional)</label><input id="q-email" name="Email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="q-message">A sua pergunta</label><textarea id="q-message" name="Mensagem" required></textarea></div>
+          <button class="btn submit" type="submit">Enviar pergunta</button>
+        </form>
+      </article>
+
+      <article class="card">
+        <h3>Pedir mais informações</h3>
+        <p class="small">Diga-nos que informação gostaria de receber.</p>
+        <form class="email-form" data-subject="Pedido de informações — Autocivismo">
+          <div class="field"><label for="i-name">Nome (opcional)</label><input id="i-name" name="Nome" autocomplete="name"></div>
+          <div class="field"><label for="i-email">Email para resposta</label><input id="i-email" name="Email" type="email" autocomplete="email"></div>
+          <div class="field"><label for="i-topic">Assunto</label><select id="i-topic" name="Assunto"><option>Informações gerais</option><option>Os seis pilares</option><option>Atividades e iniciativas</option><option>Criação da associação</option><option>Parcerias e colaboração</option><option>Outro assunto</option></select></div>
+          <div class="field"><label for="i-message">O que gostaria de saber?</label><textarea id="i-message" name="Mensagem" required></textarea></div>
+          <button class="btn submit" type="submit">Pedir informações</button>
+        </form>
+      </article>
+
+      <article class="card">
+        <h3>Enviar sugestões</h3>
+        <p class="small">As ideias da comunidade podem ajudar a melhorar e desenvolver o projeto.</p>
+        <form class="email-form" data-subject="Sugestão para o Autocivismo">
+          <div class="field"><label for="s-name">Nome (opcional)</label><input id="s-name" name="Nome"></div>
+          <div class="field"><label for="s-area">Área da sugestão</label><select id="s-area" name="Área"><option>Filosofia e princípios</option><option>Um dos seis pilares</option><option>Atividades práticas</option><option>Comunidade e voluntariado</option><option>Website e comunicação</option><option>Outra</option></select></div>
+          <div class="field"><label for="s-message">A sua sugestão</label><textarea id="s-message" name="Mensagem" required></textarea></div>
+          <button class="btn submit" type="submit">Enviar sugestão</button>
+        </form>
+      </article>
+
+      <article class="card">
+        <h3>Outras considerações</h3>
+        <p class="small">Espaço aberto para comentários, experiências ou propostas de colaboração.</p>
+        <form class="email-form" data-subject="Outras considerações — Autocivismo">
+          <div class="field"><label for="o-name">Nome (opcional)</label><input id="o-name" name="Nome"></div>
+          <div class="field"><label for="o-message">Mensagem</label><textarea id="o-message" name="Mensagem" required></textarea></div>
+          <button class="btn submit" type="submit">Enviar consideração</button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <section id="voluntariado">
+    <div class="section-head">
+      <div class="eyebrow">Faça parte da construção</div>
+      <h2>Precisamos de pessoas. Precisamos de voluntários.</h2>
+      <p class="lead">O Autocivismo está numa fase de desenvolvimento e de preparação para a criação de uma associação. Para transformar ideias em ações concretas, precisamos de mais pessoas com vontade de contribuir.</p>
+    </div>
+    <div class="notice">
+      <strong>Um projeto desta dimensão não se constrói sozinho.</strong><br>
+      Precisamos de voluntários com diferentes conhecimentos, experiências, capacidades e disponibilidade. Não é necessário saber fazer tudo: cada pessoa pode contribuir à sua maneira, de acordo com as suas possibilidades.
+    </div>
+    <article class="card volunteer" style="margin-top:18px">
+      <h3>Manifestar interesse em ser voluntário</h3>
+      <p class="small">Preencha os campos que conseguir. Este contacto serve para manifestar interesse e permitir um primeiro contacto; não constitui ainda uma inscrição formal numa associação.</p>
+      <form class="email-form" data-subject="Interesse em voluntariado — Autocivismo">
+        <div class="field"><label for="v-name">Nome</label><input id="v-name" name="Nome" autocomplete="name" required></div>
+        <div class="field"><label for="v-email">Email</label><input id="v-email" name="Email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="v-location">Localidade (opcional)</label><input id="v-location" name="Localidade" autocomplete="address-level2"></div>
+        <div class="field"><label for="v-skills">Em que áreas gostaria de ajudar?</label><textarea id="v-skills" name="Áreas de interesse" placeholder="Ex.: organização, comunicação, informática, atividades práticas, apoio comunitário, formação, jardinagem, reparações..."></textarea></div>
+        <div class="field"><label for="v-time">Disponibilidade (opcional)</label><select id="v-time" name="Disponibilidade"><option>Por definir</option><option>Algumas horas por mês</option><option>Algumas horas por semana</option><option>Disponibilidade pontual</option><option>Disponibilidade regular</option></select></div>
+        <div class="field"><label for="v-notes">Mais alguma informação? (opcional)</label><textarea id="v-notes" name="Outras informações"></textarea></div>
+        <div class="field"><label style="font-weight:500"><input type="checkbox" name="Consentimento" value="Sim" required style="width:auto;margin-right:8px">Autorizo o envio desta mensagem para o contacto do Autocivismo, para que me possam responder sobre o voluntariado.</label></div>
+        <button class="btn submit" type="submit">Quero colaborar como voluntário</button>
+      </form>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footerrow">
+    <div><strong>AUTOCIVISMO</strong><br><span class="small" style="color:#d4dfd6">Autónomo na preparação, civil na conduta.</span></div>
+    <div>Contacto: <a href="mailto:geral@autocivismo.pt">geral@autocivismo.pt</a><br><span class="small" style="color:#d4dfd6">Projeto em desenvolvimento — criação de associação em preparação.</span></div>
+  </div>
+</footer>
+
+<script>
+  // Sem servidor associado, os formulários preparam uma mensagem no programa de email do visitante.
+  // Nenhum dado é guardado neste site.
+  document.querySelectorAll(".email-form").forEach(form => {
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      const subject = form.dataset.subject || "Contacto — Autocivismo";
+      const lines = [];
+      new FormData(form).forEach((value, key) => lines.push(key + ": " + value));
+      const body = encodeURIComponent(lines.join("\\n\\n"));
+      const mailto = "mailto:geral@autocivismo.pt?subject=" + encodeURIComponent(subject) + "&body=" + body;
+      window.location.href = mailto;
+    });
+  });
+</script>
+</body>
+</html>
